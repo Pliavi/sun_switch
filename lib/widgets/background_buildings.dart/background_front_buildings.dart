@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:sun_switch/widgets/constants/sun_colors.dart';
 
 class BackgroundFrontBuildingsPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    _drawOneBuilding(canvas, size, pos: const Offset(95, 22));
-    _drawOneBuilding(canvas, size, pos: const Offset(85, 18), width: 7);
-    _drawOneBuilding(canvas, size, pos: const Offset(68, 22));
-    _drawOneBuilding(canvas, size, pos: const Offset(74, 20));
-    _drawOneBuilding(canvas, size, pos: const Offset(56, 24));
+    Offset buildingPos1 = const Offset(145, 31);
+    Offset buildingPos2 = const Offset(135, 27);
+    Offset buildingPos3 = const Offset(118, 31);
+    Offset buildingPos4 = const Offset(124, 29);
+    Offset buildingPos5 = const Offset(106, 33);
+
+    _drawOneBuilding(canvas, size, pos: buildingPos1);
+    _drawOneBuilding(canvas, size, pos: buildingPos2, width: 7);
+    _drawOneBuilding(canvas, size, pos: buildingPos3);
+    _drawOneBuilding(canvas, size, pos: buildingPos4);
+    _drawOneBuilding(canvas, size, pos: buildingPos5);
   }
 
   _drawOneBuilding(
@@ -18,7 +25,7 @@ class BackgroundFrontBuildingsPainter extends CustomPainter {
     double height = 20,
   }) {
     var paint = Paint()
-      ..color = const Color(0xFF31384B)
+      ..color = SunColors.shadow
       ..style = PaintingStyle.fill;
 
     var path = Path()
@@ -56,7 +63,7 @@ class BackgroundFrontBuildingsPainter extends CustomPainter {
     final horizontalWindowCount = buildingSize.width ~/ (windowWidth + gap);
 
     final paint = Paint()
-      ..color = Colors.grey
+      ..color = SunColors.window
       ..style = PaintingStyle.stroke
       ..strokeWidth = windowWidth;
 

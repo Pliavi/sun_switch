@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sun_switch/sun_switch.dart';
+import 'package:sun_switch/widgets/constants/sun_colors.dart';
+import 'package:sun_switch/widgets/sun_switch.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -14,9 +15,8 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.white,
-        alignment: Alignment.center,
+      backgroundColor: SunColors.mainBackground,
+      body: Center(
         child: SunSwitch(
           value: value,
           onChanged: (value) {

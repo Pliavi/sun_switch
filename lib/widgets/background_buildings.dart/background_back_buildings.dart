@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:sun_switch/widgets/constants/sun_colors.dart';
 
 class BackgroundBackBuildingsPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = const Color(0xFF3381CC)
+      ..color = SunColors.backBuildings
       ..style = PaintingStyle.fill;
 
-    final w = size.width;
     final h = size.height;
 
     const rx = 2.7;
